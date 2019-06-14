@@ -36,6 +36,7 @@ class Transfer
     if self.status == "complete"
       self.receiver.withdraw(self.amount)
       self.sender.deposit(self.amount)
+    end
   end
   
 end
