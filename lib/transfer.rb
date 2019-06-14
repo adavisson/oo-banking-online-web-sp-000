@@ -16,7 +16,7 @@ class Transfer
   end
   
   def execute_transaction
-    if !self.sender.valid?
+    if !self.valid?
       "Transaction rejected. Please check your account balance."
     elsif self.status == "pending"
       self.sender.withdraw(self.amount)
